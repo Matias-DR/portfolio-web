@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Elements */
 #__next,
 html,
 body {
@@ -24,6 +25,7 @@ li {
   padding: 0;
 }
 
+/* Classes */
 .y-scrollbar {
   overflow-y: scroll;
   overflow-x: hidden;
