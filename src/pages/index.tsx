@@ -1,5 +1,11 @@
-import styles from '@/styles/styles'
-import Card from '@/pages/components/card'
+import {
+  ContainerCard,
+  AboutMeCard,
+  ContactCard,
+  EducationCard,
+  ExperienceCard,
+  KnowledgesCard
+} from '@/pages/components/cards/'
 
 import { useState } from 'react'
 
@@ -12,6 +18,12 @@ const elements: { [key: string]: { [key: string]: string } } = {
     'about-me': 'Sobre mí',
   }
 }
+
+// 'knowledges': 'Conocimientos en chips',
+// 'experience': 'Tarjetas de cada experiencia con línea de tiempo en común',
+// 'education': 'Educación',
+// 'contact': 'Formulario de mail & Mail & Número telefónico & Redes',
+// 'about-me': 'Sobre mí',
 
 export default function Home() {
   const [card, setCard] = useState<JSX.Element | string>(elements.index['about-me'])
@@ -26,7 +38,7 @@ export default function Home() {
 
   const li = Object.entries(elements.index).map((entrie) => <li
     key={'li-' + entrie[0]}
-    className={styles.index['li']}
+    className='w-max hover:cursor-pointer hover:pl-2 hover:duration-100'
     onClick={() => handleIndexSlection(entrie[0])}
   >
     <p key={'p-' + entrie[0]}>
@@ -34,22 +46,22 @@ export default function Home() {
     </p>
   </li>)
 
-  return <main className={styles.container['main']}>
-    <div className={styles.container['main-container']}>
-      <div className={styles.container['pane']}>
-        <h1 className={styles.text['title']}>
+  return <main className='flex justify-center items-center bg-zinc-950'>
+    <div className='w-[95%] h-[95%] p-6 flex flex-col sm:flex-row bg-zinc-900 border border-solid border-zinc-500 text-zinc-200'>
+      <div className='w-full pb-8 sm:w-4/6 sm:p-0'>
+        <h1 className='text-[2rem] md:text-6xl'>
           Matias Diz Rendani
         </h1>
-        <h2 className={styles.text['subtitle']}>
+        <h2 className='text-xl'>
           Desarrollador Backend & Frontend autónomo
         </h2>
-        <div className={styles.misc['x-separator']}></div>
+        <div className='w-full h-8'></div>
         <ul>
           {li}
         </ul>
       </div>
-      <div className={`${styles.container['card']}`}>
-        <Card>{card}</Card>
+      <div className='grow sm:p-8'>
+        <ContainerCard>{card}</ContainerCard>
       </div>
     </div>
   </main>

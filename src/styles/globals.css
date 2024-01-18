@@ -5,11 +5,13 @@
 /* Elements */
 #__next,
 html,
-body {
+body,
+main {
   width: 100vw;
   height: 100vh;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 p,
@@ -46,8 +48,8 @@ li {
 
 @keyframes slideFromRightToLeft {
   0% {
-    -webkit-transform: translateX(-1rem);
-            transform: translateX(-1rem);
+    -webkit-transform: translateX(50rem);
+            transform: translateX(50rem);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -57,15 +59,15 @@ li {
 
 /* Classes */
 .fade-in {
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn .5s ease-in-out;
 }
 
 .fade-out {
-  animation: fadeOut 1s ease-in-out;
+  animation: fadeOut .5s ease-in-out;
 }
 
 .slide-from-right-to-left {
-  animation: slideFromRightToLeft 1s ease-in-out;
+  animation: slideFromRightToLeft .5s ease-in-out;
 }
 
 .y-scrollbar {
