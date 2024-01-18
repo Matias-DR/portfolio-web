@@ -1,3 +1,5 @@
 export default function ExperienceCard() {
-  return <div></div>
+  return <div className='size-full'>
+  <p>Tarjetas de cada experiencia con línea de tiempo en común</p>
+</div>
 }

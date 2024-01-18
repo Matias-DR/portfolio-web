@@ -1,3 +1,5 @@
 export default function EducationCard() {
-  return <div></div>
+  return <div className='size-full'>
+  <p>Educación</p>
+</div>
 }
