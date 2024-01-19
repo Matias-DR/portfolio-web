@@ -1,12 +1,13 @@
-import Image from 'next/image'
 import email from '@/assets/email.svg'
 import github from '@/assets/github.svg'
 import instagram from '@/assets/instagram.svg'
 import linkedin from '@/assets/linkedin.svg'
 import twitch from '@/assets/twitch.svg'
 
+import Image from 'next/image'
+
 export default function ContactCard() {
-  return <div className='size-full pr-2 sm:p-0 flex flex-col overflow-y-scroll sm:overflow-hidden'>
+  return <div className='size-full pr-2 sm:pl-32 flex flex-col overflow-y-auto sm:overflow-hidden'>
     <form className='w-full flex flex-col justify-center items-center mb-8'>
       <div className='w-full flex flex-col mb-6'>
         <label
@@ -62,19 +63,44 @@ export default function ContactCard() {
     </form>
     <div className='w-full grow flex flex-wrap place-content-evenly items-center'>
       <button>
-        <Image src={email} alt='Email' width={40} height={40} />
+        <Image
+          src={email}
+          alt='Email'
+          width={40}
+          height={40}
+        />
       </button>
       <button>
-        <Image src={github} alt='Github' width={40} height={40} />
+        <Image
+          src={github}
+          alt='Github'
+          width={40}
+          height={40}
+        />
       </button>
       <button>
-        <Image src={instagram} alt='Instagram' width={40} height={40} />
+        <Image
+          src={instagram}
+          alt='Instagram'
+          width={40}
+          height={40}
+        />
       </button>
       <button>
-        <Image src={linkedin} alt='LinkedIn' width={40} height={40} />
+        <Image
+          src={linkedin}
+          alt='LinkedIn'
+          width={40}
+          height={40}
+        />
       </button>
       <button>
-        <Image src={twitch} alt='Twitch' width={40} height={40} />
+        <Image
+          src={twitch}
+          alt='Twitch'
+          width={40}
+          height={40}
+        />
       </button>
     </div>
   </div>

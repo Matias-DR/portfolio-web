@@ -4,7 +4,7 @@ import cards from '@/pages/components/cards/cards'
 import { useState } from 'react'
 
 export default function Home() {
-  const [index, setIndex] = useState<string>('about-me')
+  const [index, setIndex] = useState<string>('')
   const [card, setCard] = useState<JSX.Element>(<></>)
 
   const handleIndexSlection = (index: string) => {
@@ -20,14 +20,14 @@ export default function Home() {
       onClick={() => handleIndexSlection(entrie[0])}
     >
       <p key={'p-' + entrie[0]}>
-        {entrie[0] === index ? '• ' : null}{entrie[1].title}
+        {entrie[1].title}{entrie[0] === index ? ' •' : null}
       </p>
     </li>
   })
 
   return <main className='flex justify-center items-center bg-zinc-950'>
-    <div className='w-[95%] h-[95%] p-6 flex flex-col sm:flex-row bg-zinc-900 border border-solid border-zinc-500 text-zinc-200'>
-      <div className='w-full h-[45%] sm:w-[65%] sm:h-full sm:p-0'>
+    <div className='relative w-[95%] h-[95%] p-4 flex flex-col sm:flex-row bg-zinc-900 border border-solid border-zinc-500 text-zinc-200'>
+      <div className='w-full h-[45%] sm:w-[45%] sm:h-full sm:p-0'>
         <h1 className='text-[2rem] md:text-6xl'>
           Matias Diz Rendani
         </h1>
@@ -35,11 +35,11 @@ export default function Home() {
           Desarrollador Backend & Frontend autónomo
         </h2>
         <div className='w-full h-8'></div>
-        <ul>
+        <ul className='w-full flex flex-col items-end'>
           {li}
         </ul>
       </div>
-      <div className='w-full h-[55%] sm:w-[35%] sm:h-full sm:p-8'>
+      <div className='w-full h-[55%] sm:w-[55%] sm:h-full'>
         <ContainerCard>{card}</ContainerCard>
       </div>
     </div>

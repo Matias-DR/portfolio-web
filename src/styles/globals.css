@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* Elements */
+
 #__next,
 html,
 body,
@@ -27,7 +28,14 @@ li {
   padding: 0;
 }
 
+/* div {
+  border: 1px solid #FF9999 !important;
+  box-sizing: border-box !important;
+} */
+
+
 /* keyframes */
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -57,7 +65,9 @@ li {
   }
 }
 
+
 /* Classes */
+
 .fade-in {
   animation: fadeIn .5s ease-in-out;
 }
@@ -70,8 +80,8 @@ li {
   animation: slideFromRightToLeft .5s ease-in-out;
 }
 
-.y-scrollbar {
-  overflow-y: scroll;
+.y-zinc-scrollbar {
+  overflow-y: auto;
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
@@ -79,7 +89,7 @@ li {
     width: 0.5rem;
     position: absolute;
     top: 0;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(244, 244, 245, .3);
   }
 
   &::-webkit-scrollbar-button {
@@ -92,11 +102,10 @@ li {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, .2);
-    border-radius: 1rem;
+    background: rgba(244, 244, 245, .2);
 
     &:hover {
-      background: rgba(0, 0, 0, .4);
+      background: rgba(244, 244, 245, .4);
     }
   }
 }
