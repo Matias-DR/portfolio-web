@@ -4,7 +4,6 @@ import react from '@/assets/react.svg'
 import tailwind from '@/assets/tailwind.svg'
 import reactHookForm from '@/assets/react-hook-form.svg'
 import axios from '@/assets/axios.svg'
-import makemymenuFrontend from '@/assets/makemymenu-frontend.mp4'
 
 import Image from 'next/image'
 import Link from 'next/link'
