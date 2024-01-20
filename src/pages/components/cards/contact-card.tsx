@@ -34,6 +34,7 @@ export default function ContactCard() {
     console.log(event.target[0].value)
     console.log(event.target[1].value)
     console.log(event.target[2].value)
+    // PENDIENTE EL ENVÍO DE MAIL
   }
 
   const handleNameChange = (event: any) => {
@@ -49,7 +50,7 @@ export default function ContactCard() {
     setMessage(event.target.value)
   }
 
-  return <div className='size-full pr-2 sm:pl-32 flex flex-col overflow-y-auto sm:overflow-hidden'>
+  return <div className='size-full pe-2 flex flex-col overflow-y-auto sm:overflow-hidden'>
     <form
       className='w-full flex flex-col justify-center items-center mb-8'
       noValidate

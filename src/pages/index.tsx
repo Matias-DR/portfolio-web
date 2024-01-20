@@ -39,7 +39,7 @@ export default function Home() {
           {li}
         </ul>
       </div>
-      <div className='w-full h-[55%] sm:w-[55%] sm:h-full'>
+      <div className='w-full h-[55%] sm:w-[55%] sm:h-full sm:ps-8'>
         <ContainerCard>{card}</ContainerCard>
       </div>
     </div>

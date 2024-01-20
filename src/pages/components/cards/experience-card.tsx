@@ -23,16 +23,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function ExperienceCard() {
-  return <div className='size-full flex flex-col gap-2 y-zinc-scrollbar pr-1'>
+  return <div className='size-full flex flex-col gap-2 y-zinc-scrollbar'>
 
     {/* 1º Card */}
 
     <div className='w-full min-h-[20rem] flex hover:scale-[1.02] duration-100'>
-      <div className='relative w-[10rem] h-full flex flex-col items-center'>
+      <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           12/2023 - 01/2024
         </p>
-        <div className='w-0 h-full border-r'></div>
+        <div className='w-0 h-full border-r' />
       </div>
       <Link href='https://github.com/Matias-DR/makemymenu-frontend' target='_blank' className='relative grow h-full hover:cursor-pointer'>
         <iframe
@@ -123,7 +123,7 @@ export default function ExperienceCard() {
         <p>
           10/2023 - 01/2024
         </p>
-        <div className='w-0 h-full border-r'></div>
+        <div className='w-0 h-full border-r' />
       </div>
       <Link href='https://github.com/Matias-DR/makemymenu-backend' target='_blank' className='relative grow h-full hover:cursor-pointer'>
         <iframe
@@ -261,7 +261,7 @@ export default function ExperienceCard() {
         <p>
           08/2021 - 12/2023
         </p>
-        <div className='w-0 h-full border-r'></div>
+        <div className='w-0 h-full border-r' />
       </div>
       <div className='relative grow'>
         <Image
@@ -289,7 +289,7 @@ export default function ExperienceCard() {
         <p>
           08/2020 - 02/2021
         </p>
-        <div className='w-0 h-full border-r'></div>
+        <div className='w-0 h-full border-r' />
       </div>
       <div className='relative grow'>
         <Image
@@ -315,7 +315,7 @@ export default function ExperienceCard() {
         <p>
           09/2020 - 02/2021
         </p>
-        <div className='w-0 h-full border-r'></div>
+        <div className='w-0 h-full border-r' />
       </div>
       <Link href='https://github.com/Matias-DR/papelerabastonew' target='_blank' className='relative grow h-full hover:cursor-pointer'>
         <Image
@@ -365,7 +365,7 @@ export default function ExperienceCard() {
         <p>
           06/2020 - 12/2020
         </p>
-        <div className='w-0 h-full border-r'></div>
+        <div className='w-0 h-full border-r' />
       </div>
       <Link href='https://github.com/Matias-DR/Bialet' target='_blank' className='relative grow h-full hover:cursor-pointer'>
         <Image
@@ -415,7 +415,7 @@ export default function ExperienceCard() {
         <p>
           2017 - Eventual
         </p>
-        <div className='w-0 h-full border-r'></div>
+        <div className='w-0 h-full border-r' />
       </div>
       <div className='relative grow'>
         <Image
