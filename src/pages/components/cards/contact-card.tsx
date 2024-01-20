@@ -50,7 +50,7 @@ export default function ContactCard() {
     setMessage(event.target.value)
   }
 
-  return <div className='size-full pe-2 flex flex-col overflow-y-auto sm:overflow-hidden'>
+  return <article className='size-full pe-2 flex flex-col overflow-y-auto sm:overflow-hidden'>
     <form
       className='w-full flex flex-col justify-center items-center mb-8'
       noValidate
@@ -168,5 +168,5 @@ export default function ContactCard() {
         />
       </Link>
     </div>
-  </div >
+  </article >
 }

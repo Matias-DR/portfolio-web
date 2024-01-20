@@ -1,5 +1,5 @@
 export default function AboutMeCard() {
-  return <div className='size-full'>
+  return <article className='size-full'>
     <p>Sobre mí</p>
-  </div>
+  </article>
 }

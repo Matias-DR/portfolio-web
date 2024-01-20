@@ -27,7 +27,7 @@ export default function Home() {
 
   return <main className='flex justify-center items-center bg-zinc-950'>
     <div className='relative w-[95%] h-[95%] p-4 flex flex-col sm:flex-row bg-zinc-900 border border-solid border-zinc-500 text-zinc-200'>
-      <div className='w-full h-[45%] sm:w-[45%] sm:h-full sm:p-0'>
+      <section className='w-full h-[45%] sm:w-[45%] sm:h-full sm:p-0'>
         <h1 className='text-[2rem] md:text-6xl'>
           Matias Diz Rendani
         </h1>
@@ -38,10 +38,10 @@ export default function Home() {
         <ul className='w-full flex flex-col items-end'>
           {li}
         </ul>
-      </div>
-      <div className='w-full h-[55%] sm:w-[55%] sm:h-full sm:ps-8'>
+      </section>
+      <section className='w-full h-[55%] sm:w-[55%] sm:h-full sm:ps-8'>
         <ContainerCard>{card}</ContainerCard>
-      </div>
+      </section>
     </div>
   </main>
 }

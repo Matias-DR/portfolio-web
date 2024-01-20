@@ -12,9 +12,9 @@ import jwt from '@/assets/jwt.svg'
 import bcrypt from '@/assets/bcrypt.svg'
 import eslint from '@/assets/eslint.svg'
 import cleanArchitecture from '@/assets/clean-architecture.svg'
-import ey from '@/assets/ernst-&-young-ey.svg'
 import python from '@/assets/python.svg'
 import pysimplegui from '@/assets/pysimplegui.svg'
+import ey from '@/assets/ernst-&-young-ey.svg'
 import papelerabasto from '@/assets/papelerabasto.png'
 import bialet from '@/assets/bialet.png'
 import ethernet from '@/assets/ethernet.jpg'
@@ -23,7 +23,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function ExperienceCard() {
-  return <div className='size-full flex flex-col gap-2 y-zinc-scrollbar'>
+  return <article className='size-full flex flex-col gap-2 y-zinc-scrollbar'>
 
     {/* 1º Card */}
 
@@ -433,5 +433,5 @@ export default function ExperienceCard() {
       </div>
     </div>
 
-  </div>
+  </article>
 }
