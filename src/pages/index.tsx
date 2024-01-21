@@ -16,7 +16,7 @@ export default function Home() {
   const li = Object.entries(cards).map((entrie) => {
     return <li
       key={'li-' + entrie[0]}
-      className='w-max hover:cursor-pointer hover:pl-2 hover:duration-100'
+      className='w-max hover:cursor-pointer hover:pl-2 hover:duration-100 hover:scale-[1.05] active:scale-100'
       onClick={() => handleIndexSlection(entrie[0])}
     >
       <p key={'p-' + entrie[0]}>

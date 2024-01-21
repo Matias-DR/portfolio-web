@@ -3,6 +3,7 @@ import github from '@/assets/github.svg'
 import instagram from '@/assets/instagram.svg'
 import linkedin from '@/assets/linkedin.svg'
 import twitch from '@/assets/twitch.svg'
+import copy from 'clipboard-copy'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,6 +15,7 @@ export default function ContactCard() {
   const [message, setMessage] = useState<string | null>(null)
   const [validate, setValidate] = useState(false)
   const [invalidEmail, setInvalidEmail] = useState(false)
+  const [handledCopy, setHandledCopy] = useState('hidden')
 
   const handleSubmit = (event: any) => {
     let validation = false
@@ -50,7 +52,22 @@ export default function ContactCard() {
     setMessage(event.target.value)
   }
 
+  const handleEmailButtonClick = () => {
+    copy('Matias-DR@outlook.com')
+    setHandledCopy('absolute')
+    setTimeout(() => {
+      setHandledCopy('hidden')
+    }, 5000)
+  }
+  
   return <article className='size-full pe-2 flex flex-col overflow-y-auto sm:overflow-hidden'>
+    <div className={`${handledCopy}`}>
+      <div className='absolute left-[1rem]'>
+        <p className='bg-zinc-700'>
+          Email copiado al portapapeles!
+        </p>
+      </div>
+    </div>
     <form
       className='w-full flex flex-col justify-center items-center mb-8'
       noValidate
@@ -65,7 +82,7 @@ export default function ContactCard() {
         </label>
         <input
           id='full-name'
-          className='bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'
+          className='bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400'
           type='text'
           placeholder='John Doe'
           onChange={handleNameChange}
@@ -81,7 +98,7 @@ export default function ContactCard() {
         </label>
         <input
           id='email'
-          className='bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'
+          className='bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400'
           type='email'
           placeholder='john.doe@domain.com'
           onChange={handleEmailChange}
@@ -99,7 +116,7 @@ export default function ContactCard() {
         <textarea
           id='message'
           rows={4}
-          className='bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'
+          className='bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400'
           placeholder='Escriba su mensaje aquí...'
           onChange={handleMessageChange}
         />
@@ -107,7 +124,7 @@ export default function ContactCard() {
       </div>
       <div className='w-full flex flex-col items-center'>
         <button
-          className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded'
+          className='shadow bg-blue-300 hover:bg-blue-200 focus:shadow-outline focus:outline-none text-zinc-900 font-bold py-2 px-4 hover:scale-[1.05] active:scale-100'
           type='submit'
         >
           Enviar mensaje
@@ -115,7 +132,10 @@ export default function ContactCard() {
       </div>
     </form >
     <div className='w-full grow flex flex-wrap place-content-evenly items-center'>
-      <button>
+      <button
+        className='relative hover:scale-[1.05] active:scale-100'
+        onClick={handleEmailButtonClick}
+      >
         <Image
           src={emailSVG}
           alt='Email'
@@ -126,6 +146,7 @@ export default function ContactCard() {
       <Link
         href='https://github.com/Matias-DR'
         target='_blank'
+        className='hover:scale-[1.05] active:scale-100'
       >
         <Image
           src={github}
@@ -137,6 +158,7 @@ export default function ContactCard() {
       <Link
         href='https://www.instagram.com/_matiasdr/'
         target='_blank'
+        className='hover:scale-[1.05] active:scale-100'
       >
         <Image
           src={instagram}
@@ -148,6 +170,7 @@ export default function ContactCard() {
       <Link
         href='https://www.linkedin.com/in/matias-diz-rendani/'
         target='_blank'
+        className='hover:scale-[1.05] active:scale-100'
       >
         <Image
           src={linkedin}
@@ -159,6 +182,7 @@ export default function ContactCard() {
       <Link
         href='https://www.twitch.tv/matibaratt'
         target='_blank'
+        className='hover:scale-[1.05] active:scale-100'
       >
         <Image
           src={twitch}

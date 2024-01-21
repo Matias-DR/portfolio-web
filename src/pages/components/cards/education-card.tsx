@@ -34,7 +34,7 @@ const cardsData: {
     src: excel,
     text: 'Cruso en Udemy de Excel',
     link: {
-      url: 'ude.my/UC-fa7b52b7-31ed-418e-816f-d1f487e20d00',
+      url: 'https://www.udemy.com/certificate/UC-fa7b52b7-31ed-418e-816f-d1f487e20d00/',
       text: '¡Curso Profesional Excel 2021 - Para Empresas!'
     }
   },
@@ -43,7 +43,7 @@ const cardsData: {
     src: css,
     text: 'Cruso en Udemy de CSS',
     link: {
-      url: 'ude.my/UC-4210d126-da5a-44c2-ada6-65f4bf780e12',
+      url: 'https://www.udemy.com/certificate/UC-4210d126-da5a-44c2-ada6-65f4bf780e12/',
       text: 'Desarrollo web. CSS desde cero. Edición 2020'
     }
   },
@@ -52,7 +52,7 @@ const cardsData: {
     src: html,
     text: 'Cruso en Udemy de HTML',
     link: {
-      url: 'ude.my/UC-32458696-76ee-45e1-a236-d5e5723b4b16',
+      url: 'https://www.udemy.com/certificate/UC-32458696-76ee-45e1-a236-d5e5723b4b16/',
       text: 'HTML5 desde cero Edición 2020'
     }
   },
@@ -79,7 +79,7 @@ Object.entries(cardsData).map(([key, value]) => {
     <div className='min-w-[8rem] max-w-[8rem] h-[6rem] flex flex-col items-center'>
       <p className='w-full text-right'>{value.date}:</p>
     </div>
-    <div className='relative grow max-h-[6rem] ms-2 border-s hover:scale-[1.02] duration-100'>
+    <div className='relative grow max-h-[6rem] ms-2 border-s bg-zinc-800 hover:scale-[1.02] duration-100'>
       {value.src && <Image
         src={value.src}
         alt={`Certificado de ${key}`}

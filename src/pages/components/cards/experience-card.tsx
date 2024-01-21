@@ -27,14 +27,18 @@ export default function ExperienceCard() {
 
     {/* 1º Card */}
 
-    <div className='w-full min-h-[20rem] flex hover:scale-[1.02] duration-100'>
+    <div className='w-full min-h-[20rem] flex'>
       <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           12/2023 - 01/2024
         </p>
         <div className='w-0 h-full border-r' />
       </div>
-      <Link href='https://github.com/Matias-DR/makemymenu-frontend' target='_blank' className='relative grow h-full hover:cursor-pointer'>
+      <Link
+        href='https://github.com/Matias-DR/makemymenu-frontend'
+        target='_blank'
+        className='relative grow h-full hover:cursor-pointer hover:scale-[1.02] duration-100'
+      >
         <iframe
           className='absolute size-full opacity-10 object-cover'
           src='https://www.youtube.com/embed/JL3xnqurkrc?si=uzxDEiGYL42fRuf4&amp;controls=0&mute=1&autoplay=1&loop=1&playlist=JL3xnqurkrc&disablekb=1&showinfo=0'
@@ -54,7 +58,7 @@ export default function ExperienceCard() {
             <Link
               href='https://nextjs.org/'
               target='_blank'
-              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'
+              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
             >
               <Image
                 src={nextjs}
@@ -66,7 +70,7 @@ export default function ExperienceCard() {
             <Link
               href='https://react.dev/'
               target='_blank'
-              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'
+              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
             >
               <Image
                 src={react}
@@ -78,7 +82,7 @@ export default function ExperienceCard() {
             <Link
               href='https://react-hook-form.com/'
               target='_blank'
-              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'
+              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
             >
               <Image
                 src={reactHookForm}
@@ -90,7 +94,7 @@ export default function ExperienceCard() {
             <Link
               href='https://tailwindcss.com/'
               target='_blank'
-              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'
+              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
             >
               <Image
                 src={tailwind}
@@ -102,7 +106,7 @@ export default function ExperienceCard() {
             <Link
               href='https://axios-http.com/'
               target='_blank'
-              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'
+              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
             >
               <Image
                 src={axios}
@@ -118,14 +122,18 @@ export default function ExperienceCard() {
 
     {/* 2º Card */}
 
-    <div className='w-full min-h-[20rem] flex flex hover:scale-[1.02] duration-100'>
+    <div className='w-full min-h-[20rem] flex flex'>
       <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           10/2023 - 01/2024
         </p>
         <div className='w-0 h-full border-r' />
       </div>
-      <Link href='https://github.com/Matias-DR/makemymenu-backend' target='_blank' className='relative grow h-full hover:cursor-pointer'>
+      <Link
+        href='https://github.com/Matias-DR/makemymenu-backend'
+        target='_blank'
+        className='relative grow h-full hover:cursor-pointer hover:scale-[1.02] duration-100'
+      >
         <iframe
           className='absolute size-full opacity-10 object-cover'
           src='https://www.youtube.com/embed/hkk7BekV3_o?si=GLVRzfM0jmVNv2vx&amp;controls=0&mute=1&autoplay=1&loop=1&playlist=hkk7BekV3_o&disablekb=1&showinfo=0'
@@ -144,7 +152,7 @@ export default function ExperienceCard() {
           <div className='w-full flex flex-wrap gap-2'>
             <Link
               href='https://nodejs.org/en'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={nodejs}
                 alt='Node.js'
@@ -154,7 +162,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://www.typescriptlang.org/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={typescript}
                 alt='Typescript'
@@ -164,7 +172,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://mongoosejs.com/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={mongoose}
                 alt='Mongoose'
@@ -174,7 +182,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://www.mongodb.com/es'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={mongodb}
                 alt='MongoDB - Atlas'
@@ -185,7 +193,7 @@ export default function ExperienceCard() {
             <Link
               href='https://axios-http.com/'
               target='_blank'
-              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'
+              className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
             >
               <Image
                 src={axios}
@@ -196,7 +204,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://expressjs.com/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={express}
                 alt='Express'
@@ -206,7 +214,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://jwt.io/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={jwt}
                 alt='JWT'
@@ -216,7 +224,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://www.npmjs.com/package/bcrypt'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={bcrypt}
                 alt='Bcrypt'
@@ -226,12 +234,12 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://www.npmjs.com/package/dotenv'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <p>dotenv</p>
             </Link>
             <Link
               href='https://eslint.org/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={eslint}
                 alt='eslint'
@@ -241,7 +249,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={cleanArchitecture}
                 alt='Clean Architecture'
@@ -256,14 +264,14 @@ export default function ExperienceCard() {
 
     {/* 3º Card */}
 
-    <div className='w-full min-h-[20rem] flex flex hover:scale-[1.02] duration-100'>
+    <div className='w-full min-h-[20rem] flex flex'>
       <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           08/2021 - 12/2023
         </p>
         <div className='w-0 h-full border-r' />
       </div>
-      <div className='relative grow'>
+      <div className='relative grow hover:scale-[1.02] duration-100'>
         <Image
           src={ey}
           alt='Ernst & Young'
@@ -284,14 +292,14 @@ export default function ExperienceCard() {
 
     {/* 4º Card */}
 
-    <div className='w-full min-h-[20rem] flex flex hover:scale-[1.02] duration-100'>
+    <div className='w-full min-h-[20rem] flex flex'>
       <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           08/2020 - 02/2021
         </p>
         <div className='w-0 h-full border-r' />
       </div>
-      <div className='relative grow'>
+      <div className='relative grow hover:scale-[1.02] duration-100'>
         <Image
           src={ey}
           alt='Ernst & Young'
@@ -310,14 +318,18 @@ export default function ExperienceCard() {
 
     {/* 5º Card */}
 
-    <div className='w-full min-h-[20rem] flex flex hover:scale-[1.02] duration-100'>
+    <div className='w-full min-h-[20rem] flex flex'>
       <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           09/2020 - 02/2021
         </p>
         <div className='w-0 h-full border-r' />
       </div>
-      <Link href='https://github.com/Matias-DR/papelerabastonew' target='_blank' className='relative grow h-full hover:cursor-pointer'>
+      <Link
+        href='https://github.com/Matias-DR/papelerabastonew'
+        target='_blank'
+        className='relative grow h-full hover:cursor-pointer hover:scale-[1.02] duration-100'
+      >
         <Image
           src={papelerabasto}
           alt='Papelera Abasto'
@@ -335,7 +347,7 @@ export default function ExperienceCard() {
           <div className='w-full flex flex-wrap gap-2'>
             <Link
               href='https://www.python.org/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={python}
                 alt='Python'
@@ -345,7 +357,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://www.pysimplegui.org/en/latest/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={pysimplegui}
                 alt='PySimpleGUI'
@@ -360,14 +372,18 @@ export default function ExperienceCard() {
 
     {/* 6º Card */}
 
-    <div className='w-full min-h-[20rem] flex flex hover:scale-[1.02] duration-100'>
+    <div className='w-full min-h-[20rem] flex flex'>
       <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           06/2020 - 12/2020
         </p>
         <div className='w-0 h-full border-r' />
       </div>
-      <Link href='https://github.com/Matias-DR/Bialet' target='_blank' className='relative grow h-full hover:cursor-pointer'>
+      <Link
+        href='https://github.com/Matias-DR/Bialet'
+        target='_blank'
+        className='relative grow h-full hover:cursor-pointer hover:scale-[1.02] duration-100'
+      >
         <Image
           src={bialet}
           alt='Bialet'
@@ -385,7 +401,7 @@ export default function ExperienceCard() {
           <div className='w-full flex flex-wrap gap-2'>
             <Link
               href='https://www.python.org/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={python}
                 alt='Python'
@@ -395,7 +411,7 @@ export default function ExperienceCard() {
             </Link>
             <Link
               href='https://www.pysimplegui.org/en/latest/'
-              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300'>
+              target='_blank' className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'>
               <Image
                 src={pysimplegui}
                 alt='PySimpleGUI'
@@ -410,14 +426,14 @@ export default function ExperienceCard() {
 
     {/* 7º Card */}
 
-    <div className='w-full min-h-[20rem] flex flex hover:scale-[1.02] duration-100'>
+    <div className='w-full min-h-[20rem] flex flex'>
       <div className='w-[10rem] h-full flex flex-col items-center'>
         <p>
           2017 - Eventual
         </p>
         <div className='w-0 h-full border-r' />
       </div>
-      <div className='relative grow'>
+      <div className='relative grow hover:scale-[1.02] duration-100'>
         <Image
           src={ethernet}
           alt='Ethernet'
