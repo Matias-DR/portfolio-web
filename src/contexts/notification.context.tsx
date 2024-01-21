@@ -1,3 +1,9 @@
+import success from '@/assets/status/success.svg'
+import error from '@/assets/status/error.svg'
+import warning from '@/assets/status/warning.svg'
+import info from '@/assets/status/info.svg'
+
+import Image from 'next/image'
 import {
   createContext,
   useContext,
@@ -23,11 +29,18 @@ export enum Status {
   Info = 'info'
 }
 
-const ringColor: Record<Status, string> = {
-  'success': 'ring-green-400',
-  'error': 'ring-red-400',
-  'warning': 'ring-orange-400',
-  'info': 'ring-blue-400'
+const ringColorByStatus: Record<Status, string> = {
+  'success': 'ring-green-500',
+  'error': 'ring-red-500',
+  'warning': 'ring-orange-500',
+  'info': 'ring-blue-500'
+}
+
+const svgByStatus: Record<Status, string> = {
+  'success': success,
+  'error': error,
+  'warning': warning,
+  'info': info
 }
 
 interface Props {
@@ -53,7 +66,14 @@ export const NotificationProvider = ({ children }: Props) => {
 
   return <NotificationContext.Provider value={{ show }}>
     {children}
-    {notification && <div className={`absolute bottom-[1rem] left-[1rem] px-2 bg-zinc-800 border-2 border-zinc-900 ring-2 ${ringColor[notification.type]}`}>
+    {notification && <div className={`absolute bottom-[1rem] left-[1rem] flex justify-center items-center px-2 bg-zinc-800 border-2 border-zinc-900 ring-2 ${ringColorByStatus[notification.type]}`}>
+      <Image
+        src={svgByStatus[notification.type]}
+        width={20}
+        height={20}
+        alt={notification.type}
+        className='mr-2'
+      />
       <p className='font-bold text-zinc-300'>
         {notification.message}
       </p>
