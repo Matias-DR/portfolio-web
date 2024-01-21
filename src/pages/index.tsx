@@ -1,5 +1,6 @@
-import { ContainerCard } from '@/pages/components/cards/'
-import cards from '@/pages/components/cards/cards'
+import { ContainerCard } from '@/components/cards/'
+import cards from '@/components/cards/cards'
+import { NotificationProvider } from '@/contexts/notification.context'
 
 import { useState } from 'react'
 
@@ -40,7 +41,9 @@ export default function Home() {
         </ul>
       </section>
       <section className='w-full h-[55%] sm:w-[55%] sm:h-full sm:ps-8'>
-        <ContainerCard>{card}</ContainerCard>
+        <NotificationProvider>
+          <ContainerCard>{card}</ContainerCard>
+        </NotificationProvider>
       </section>
     </div>
   </main>

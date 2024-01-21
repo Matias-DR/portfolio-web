@@ -4,7 +4,7 @@ import {
   EducationCard,
   ExperienceCard,
   KnowledgesCard
-} from '@/pages/components/cards/'
+} from '@/components/cards/'
 
 const cards: {
   [key: string]: {

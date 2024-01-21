@@ -4,6 +4,10 @@ import instagram from '@/assets/instagram.svg'
 import linkedin from '@/assets/linkedin.svg'
 import twitch from '@/assets/twitch.svg'
 import copy from 'clipboard-copy'
+import {
+  useNotification,
+  Status
+} from '@/contexts/notification.context'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,7 +19,7 @@ export default function ContactCard() {
   const [message, setMessage] = useState<string | null>(null)
   const [validate, setValidate] = useState(false)
   const [invalidEmail, setInvalidEmail] = useState(false)
-  const [handledCopy, setHandledCopy] = useState('hidden')
+  const { show } = useNotification()
 
   const handleSubmit = (event: any) => {
     let validation = false
@@ -54,20 +58,13 @@ export default function ContactCard() {
 
   const handleEmailButtonClick = () => {
     copy('Matias-DR@outlook.com')
-    setHandledCopy('absolute')
-    setTimeout(() => {
-      setHandledCopy('hidden')
-    }, 5000)
+    show(
+      'Email copiado al portapapeles!',
+      Status.Success
+    )
   }
   
   return <article className='size-full pe-2 flex flex-col overflow-y-auto sm:overflow-hidden'>
-    <div className={`${handledCopy}`}>
-      <div className='absolute left-[1rem]'>
-        <p className='bg-zinc-700'>
-          Email copiado al portapapeles!
-        </p>
-      </div>
-    </div>
     <form
       className='w-full flex flex-col justify-center items-center mb-8'
       noValidate
