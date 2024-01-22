@@ -32,10 +32,17 @@ export default function Home() {
     <Head>
       <title>Matias Diz Rendani</title>
       <meta name='description' content='Portfolio Web de Matias Diz Rendani' />
+      {/* META General */}
       <meta property='og:image' content='https://raw.githubusercontent.com/Matias-DR/portfolio-web/main/src/assets/portfolio-web.png' />
       <meta property='og:title' content='Matias Diz Rendani' />
       <meta property='og:description' content='Portfolio Web de Matias Diz Rendani' />
       <meta property='og:url' content='https://mdr-portfolio-web.vercel.app/' />
+      {/* META LinkedIn */}
+      {/* Metadatos específicos de LinkedIn */}
+      <meta property='og:site_name' content='Matias Diz Rendani' />
+      <meta property='og:type' content='website' />
+      <meta property='og:locale' content='es_ES' />
+      <meta name='linkedin:card' content='summary_large_image' />
     </Head>
     <main className='flex justify-center items-center bg-zinc-950'>
       <div className='relative w-[95%] h-[95%] p-4 flex flex-col sm:flex-row bg-zinc-900 border border-solid border-zinc-500 text-zinc-200'>
