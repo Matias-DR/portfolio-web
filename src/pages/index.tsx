@@ -1,7 +1,9 @@
 import { ContainerCard } from '@/components/cards/'
 import cards from '@/components/cards/cards'
 import { NotificationProvider } from '@/contexts/notification.context'
+import portfolioWeb from 'portfolio-web.png'
 
+import Head from 'next/head'
 import { useState } from 'react'
 
 export default function Home() {
@@ -26,25 +28,35 @@ export default function Home() {
     </li>
   })
 
-  return <main className='flex justify-center items-center bg-zinc-950'>
-    <div className='relative w-[95%] h-[95%] p-4 flex flex-col sm:flex-row bg-zinc-900 border border-solid border-zinc-500 text-zinc-200'>
-      <section className='w-full h-[45%] sm:w-[45%] sm:h-full sm:p-0'>
-        <h1 className='text-[2rem] md:text-6xl'>
-          Matias Diz Rendani
-        </h1>
-        <h2 className='text-xl'>
-          Desarrollador Backend & Frontend autónomo
-        </h2>
-        <div className='w-full h-8'></div>
-        <ul className='w-full flex flex-col items-end'>
-          {li}
-        </ul>
-      </section>
-      <section className='w-full h-[55%] sm:w-[55%] sm:h-full sm:ps-8'>
-        <NotificationProvider>
-          <ContainerCard>{card}</ContainerCard>
-        </NotificationProvider>
-      </section>
-    </div>
-  </main>
+  return <>
+    <Head>
+      <title>Matias Diz Rendani</title>
+      <meta name='description' content='Portfolio Web de Matias Diz Rendani' />
+      <meta property='og:image' content='' />
+      <meta property='og:title' content='Matias Diz Rendani' />
+      <meta property='og:description' content='Portfolio Web de Matias Diz Rendani' />
+      <meta property='og:url' content='https://mdr-portfolio-web.vercel.app/' />
+    </Head>
+    <main className='flex justify-center items-center bg-zinc-950'>
+      <div className='relative w-[95%] h-[95%] p-4 flex flex-col sm:flex-row bg-zinc-900 border border-solid border-zinc-500 text-zinc-200'>
+        <section className='w-full h-[45%] sm:w-[45%] sm:h-full sm:p-0'>
+          <h1 className='text-[2rem] md:text-6xl'>
+            Matias Diz Rendani
+          </h1>
+          <h2 className='text-xl'>
+            Desarrollador Backend & Frontend autónomo
+          </h2>
+          <div className='w-full h-8'></div>
+          <ul className='w-full flex flex-col items-end'>
+            {li}
+          </ul>
+        </section>
+        <section className='w-full h-[55%] sm:w-[55%] sm:h-full sm:ps-8'>
+          <NotificationProvider>
+            <ContainerCard>{card}</ContainerCard>
+          </NotificationProvider>
+        </section>
+      </div>
+    </main>
+  </>
 }
