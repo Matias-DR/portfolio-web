@@ -38,7 +38,6 @@ export default function Home() {
       <meta property='og:description' content='Portfolio Web de Matias Diz Rendani' />
       <meta property='og:url' content='https://mdr-portfolio-web.vercel.app/' />
       {/* META LinkedIn */}
-      {/* Metadatos específicos de LinkedIn */}
       <meta property='og:site_name' content='Matias Diz Rendani' />
       <meta property='og:type' content='website' />
       <meta property='og:locale' content='es_ES' />
