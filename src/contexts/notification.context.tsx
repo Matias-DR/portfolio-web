@@ -63,7 +63,7 @@ export const NotificationProvider = ({ children }: Props) => {
     setTimeout(() => {
       setNotification(null)
       setGetOutEffect('')
-    }, duration >= 1500 ? duration : 1500)
+    }, duration >= 1500 ? duration : (duration === null || duration === undefined) ? 5500 : 1500)
     setTimeout(() => {
       setGetOutEffect('-translate-x-[50rem] duration-500')
     }, duration-500)

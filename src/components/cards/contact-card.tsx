@@ -32,15 +32,37 @@ export default function ContactCard() {
       setValidate(true)
       validation = true
     }
-    if (email !== null && !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(email)) {
+    if (email !== null && !/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(email)) {
       setInvalidEmail(true)
       validation = true
+    } else {
+      setInvalidEmail(false)
     }
     if (validation) return
-    console.log(event.target[0].value)
-    console.log(event.target[1].value)
-    console.log(event.target[2].value)
-    // PENDIENTE EL ENVÍO DE MAIL
+    fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message
+      })
+    })
+      .then((res: any) => {
+        if (res.status !== 200) throw new Error()
+        show(
+          'Mensaje enviado!',
+          Status.Success
+        )
+      })
+      .catch(() => {
+        show(
+          'Error al enviar el mensaje. Por favor intente nuevamente.',
+          Status.Error
+        )
+      })
   }
 
   const handleNameChange = (event: any) => {
