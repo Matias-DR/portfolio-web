@@ -32,7 +32,7 @@ export default function Home() {
     <Head>
       <title>Matias Diz Rendani</title>
       <meta name='description' content='Portfolio Web de Matias Diz Rendani' />
-      <meta property='og:image' content='' />
+      <meta property='og:image' content='https://raw.githubusercontent.com/Matias-DR/portfolio-web/main/src/assets/portfolio-web.png' />
       <meta property='og:title' content='Matias Diz Rendani' />
       <meta property='og:description' content='Portfolio Web de Matias Diz Rendani' />
       <meta property='og:url' content='https://mdr-portfolio-web.vercel.app/' />
