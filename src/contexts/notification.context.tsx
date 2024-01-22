@@ -52,6 +52,7 @@ export const NotificationProvider = ({ children }: Props) => {
     message: string
     type: Status
   } | null>(null)
+  const [getOutEffect, setGetOutEffect] = useState('')
 
   const show = (
     message: string,
@@ -60,13 +61,17 @@ export const NotificationProvider = ({ children }: Props) => {
   ) => {
     setNotification({ message, type })
     setTimeout(() => {
-    setNotification(null)
-    }, duration)
+      setNotification(null)
+      setGetOutEffect('')
+    }, duration >= 1500 ? duration : 1500)
+    setTimeout(() => {
+      setGetOutEffect('-translate-x-[50rem] duration-500')
+    }, duration-500)
   }
 
   return <NotificationContext.Provider value={{ show }}>
     {children}
-    {notification && <div className={`absolute bottom-[1rem] left-[1rem] flex justify-center items-center px-2 bg-zinc-800 border-2 border-zinc-900 ring-2 ${ringColorByStatus[notification.type]}`}>
+    {notification && <div className={`absolute bottom-[1rem] left-[1rem] flex justify-center items-center px-2 bg-zinc-800 border-2 border-zinc-900 ring-2 ${ringColorByStatus[notification.type]} slide-from-left-to-right ${getOutEffect}`}>
       <Image
         src={svgByStatus[notification.type]}
         width={20}
