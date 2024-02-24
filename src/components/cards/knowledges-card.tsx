@@ -26,15 +26,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
-const chipsData: {
-  [ket: string]: {
-    [key: string]: {
-      link: string
-      src: string
-      text: string
-    }
-  }
-} = {
+const chipsData: Record<
+  string,
+  Record<string, { link: string; src: string; text: string }>
+> = {
   'programming-languajes': {
     typescript: {
       link: 'https://www.typescriptlang.org/',
@@ -172,11 +167,7 @@ const chipsData: {
   },
 }
 
-const chips: {
-  [key: string]: {
-    [key: string]: ReactNode
-  }
-} = {}
+const chips: Record<string, Record<string, ReactNode>> = {}
 
 Object.entries(chipsData).map(([superKey, value]) => {
   Object.entries(value).map(([subKey, value]) => {
@@ -186,7 +177,7 @@ Object.entries(chipsData).map(([superKey, value]) => {
         <Link
           href={value.link}
           target='_blank'
-          className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
+          className='max-w-max flex items-center gap-2 px-2 bg-blue-300 font-medium text-zinc-800 border-2 border-zinc-900 rounded-full ring-2 ring-blue-300 hover:scale-[1.05] active:scale-100'
         >
           <Image
             src={value.src}
