@@ -35,7 +35,7 @@ export default function ExperienceCard() {
           <div className='w-0 h-full border-r' />
         </div>
         <Link
-          href='https://github.com/Matias-DR/mdr-todo-challenge-nextjs'
+          href='https://mdr-todo-frontend.vercel.app/'
           target='_blank'
           className='relative grow h-full hover:cursor-pointer hover:scale-[1.02] duration-100'
         >
@@ -51,7 +51,14 @@ export default function ExperienceCard() {
             <p className='w-full'>
               Aplicación para la creación de tareas compuestas por un título, una
               descripción y estado (completo/incompleto) a través de cuentas de
-              usuario.
+              usuario.{' '}
+              <Link
+                href='https://github.com/Matias-DR/mdr-todo-challenge-nextjs'
+                target='_blank'
+                className='font-bold text-blue-500'
+              >
+                Git
+              </Link>
             </p>
             <p className='w-full'>Tecnologías usadas:</p>
             <div className='w-full flex flex-wrap gap-2'>
@@ -142,7 +149,9 @@ export default function ExperienceCard() {
             <h1 className='w-full text-2xl'>ToDo</h1>
             <h2 className='w-full text-xl'>Backend</h2>
             <p className='w-full'>
-              Aplicación que permite realizar operaciones CRUD referentes a usuarios y tareas. También permite la autenticación de usuarios y mantenimiento de sesiones.
+              Aplicación que permite realizar operaciones CRUD referentes a usuarios y
+              tareas. También permite la autenticación de usuarios y mantenimiento de
+              sesiones.
             </p>
             <p className='w-full'>Tecnologías usadas:</p>
             <div className='w-full flex flex-wrap gap-2'>
