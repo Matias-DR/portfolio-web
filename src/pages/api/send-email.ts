@@ -1,27 +1,17 @@
 import { createTransport } from 'nodemailer'
 
-import type {
-  NextApiRequest,
-  NextApiResponse
-} from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 const transporter = createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD
-  }
+    pass: process.env.EMAIL_PASSWORD,
+  },
 })
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const {
-    name,
-    email,
-    message
-  } = req.body
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { name, email, message } = req.body
 
   const options = {
     from: process.env.EMAIL_USER,

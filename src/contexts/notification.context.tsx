@@ -4,18 +4,10 @@ import warning from '@/assets/status/warning.svg'
 import info from '@/assets/status/info.svg'
 
 import Image from 'next/image'
-import {
-  createContext,
-  useContext,
-  useState
-} from 'react'
+import { createContext, useContext, useState } from 'react'
 
 const NotificationContext = createContext({
-  show: (
-    message: string,
-    type: Status,
-    duration?: number
-  ) => { }
+  show: (message: string, type: Status, duration?: number) => {},
 })
 
 export const useNotification = () => {
@@ -26,21 +18,21 @@ export enum Status {
   Success = 'success',
   Error = 'error',
   Warning = 'warning',
-  Info = 'info'
+  Info = 'info',
 }
 
 const ringColorByStatus: Record<Status, string> = {
-  'success': 'ring-green-500',
-  'error': 'ring-red-500',
-  'warning': 'ring-orange-500',
-  'info': 'ring-blue-500'
+  success: 'ring-green-500',
+  error: 'ring-red-500',
+  warning: 'ring-orange-500',
+  info: 'ring-blue-500',
 }
 
 const svgByStatus: Record<Status, string> = {
-  'success': success,
-  'error': error,
-  'warning': warning,
-  'info': info
+  success: success,
+  error: error,
+  warning: warning,
+  info: info,
 }
 
 interface Props {
@@ -54,34 +46,41 @@ export const NotificationProvider = ({ children }: Props) => {
   } | null>(null)
   const [getOutEffect, setGetOutEffect] = useState('')
 
-  const show = (
-    message: string,
-    type: Status,
-    duration: number = 5000
-  ) => {
+  const show = (message: string, type: Status, duration: number = 5000) => {
     setNotification({ message, type })
-    setTimeout(() => {
-      setNotification(null)
-      setGetOutEffect('')
-    }, duration >= 1500 ? duration : (duration === null || duration === undefined) ? 5500 : 1500)
+    setTimeout(
+      () => {
+        setNotification(null)
+        setGetOutEffect('')
+      },
+      duration >= 1500
+        ? duration
+        : duration === null || duration === undefined
+          ? 5500
+          : 1500,
+    )
     setTimeout(() => {
       setGetOutEffect('-translate-x-[50rem] duration-500')
-    }, duration-500)
+    }, duration - 500)
   }
 
-  return <NotificationContext.Provider value={{ show }}>
-    {children}
-    {notification && <div className={`absolute bottom-[1rem] left-[1rem] flex justify-center items-center px-2 bg-zinc-800 border-2 border-zinc-900 ring-2 ${ringColorByStatus[notification.type]} slide-from-left-to-right ${getOutEffect}`}>
-      <Image
-        src={svgByStatus[notification.type]}
-        width={20}
-        height={20}
-        alt={notification.type}
-        className='mr-2'
-      />
-      <p className='font-bold text-zinc-300'>
-        {notification.message}
-      </p>
-    </div>}
-  </NotificationContext.Provider>
+  return (
+    <NotificationContext.Provider value={{ show }}>
+      {children}
+      {notification && (
+        <div
+          className={`absolute bottom-[1rem] left-[1rem] flex justify-center items-center px-2 bg-zinc-800 border-2 border-zinc-900 ring-2 ${ringColorByStatus[notification.type]} slide-from-left-to-right ${getOutEffect}`}
+        >
+          <Image
+            src={svgByStatus[notification.type]}
+            width={20}
+            height={20}
+            alt={notification.type}
+            className='mr-2'
+          />
+          <p className='font-bold text-zinc-300'>{notification.message}</p>
+        </div>
+      )}
+    </NotificationContext.Provider>
+  )
 }

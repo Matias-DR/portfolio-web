@@ -1,10 +1,9 @@
-import {
-  useEffect,
-  useState
-} from 'react'
+import { useEffect, useState } from 'react'
 import { ReactNode } from 'react'
 
-interface Props { children: ReactNode }
+interface Props {
+  children: ReactNode
+}
 
 export default function ContainerCard({ children }: Props) {
   const [key, setKey] = useState(0)
@@ -20,15 +19,22 @@ export default function ContainerCard({ children }: Props) {
       setAbsolute('')
       setCurrentCard(children)
       setNextCard(null)
-  }, 500)
+    }, 500)
   }, [children])
 
-  return <div key={key} className='relative size-full'>
-    {currentCard && <div className={`${absolute} size-full fade-out`}>
-      {currentCard}
-    </div>}
-    {nextCard && <div className={`${absolute} size-full fade-in slide-from-right-to-left`}>
-      {nextCard}
-    </div>}
-  </div>
+  return (
+    <div
+      key={key}
+      className='relative size-full'
+    >
+      {currentCard && (
+        <div className={`${absolute} size-full fade-out`}>{currentCard}</div>
+      )}
+      {nextCard && (
+        <div className={`${absolute} size-full fade-in slide-from-right-to-left`}>
+          {nextCard}
+        </div>
+      )}
+    </div>
+  )
 }

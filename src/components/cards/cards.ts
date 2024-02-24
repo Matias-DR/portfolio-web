@@ -3,7 +3,7 @@ import {
   ContactCard,
   EducationCard,
   ExperienceCard,
-  KnowledgesCard
+  KnowledgesCard,
 } from '@/components/cards/'
 
 const cards: {
@@ -14,23 +14,23 @@ const cards: {
 } = {
   'knowledges': {
     title: 'Conocimientos',
-    element: KnowledgesCard
+    element: KnowledgesCard,
   },
   'experience': {
     title: 'Experiencia',
-    element: ExperienceCard
+    element: ExperienceCard,
   },
   'education': {
     title: 'Educación',
-    element: EducationCard
+    element: EducationCard,
   },
   'contact': {
     title: 'Contacto',
-    element: ContactCard
+    element: ContactCard,
   },
   'about-me': {
     title: 'Sobre mí',
-    element: AboutMeCard
+    element: AboutMeCard,
   },
 }
 
